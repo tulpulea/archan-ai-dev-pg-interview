@@ -7,3 +7,6 @@ This repository provides an LLM-driven data-extraction pipeline that captures pr
 ### Reproducability Steps
 1. Create virtual environment: `python3 -m venv pg-task`
 2. Activate virtual environment: `source pg-task/bin/activate`
+3. Create environment variable file: `touch .env`
+4. Add Gemini API Key to .env file: `GEMINI_API_KEY=<INSERT API KEY HERE>`
+
