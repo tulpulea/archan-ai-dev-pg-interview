@@ -33,7 +33,6 @@ class TestRetryPromptCreation:
         prompt = create_retry_field_extract_prompt(test_text,"","")
         assert "Lord of the Rings" in prompt
 
-
     def test_retry_prompt_current_year(self):
         test_text = "test"
         prompt = create_retry_field_extract_prompt(test_text,"","")
