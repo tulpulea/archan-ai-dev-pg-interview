@@ -9,4 +9,5 @@ This repository provides an LLM-driven data-extraction pipeline that captures pr
 2. Activate virtual environment: `source pg-task/bin/activate`
 3. Create environment variable file: `touch .env`
 4. Add Gemini API Key to .env file: `GEMINI_API_KEY=<INSERT API KEY HERE>`
+5. Update PYTHONPATH for tests: `export PYTHONPATH="$PYTHONPATH:$PWD"`
 
