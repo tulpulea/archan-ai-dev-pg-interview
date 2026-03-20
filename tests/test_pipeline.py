@@ -31,7 +31,7 @@ class TestPipeline:
         def fake_llm(prompt):
             if len(calls) < 1:
                 calls.append(1)
-                #bas json - missing closing curly bracket }
+                #bad json - missing closing curly bracket }
                 return dedent("""
                         {
                         "product_name": "3-in-1 Pods",
@@ -65,7 +65,7 @@ class TestPipeline:
         def fake_llm(prompt):
             if len(calls) < 2:
                 calls.append(1)
-                #bas json - missing closing curly bracket }
+                #bad json - missing closing curly bracket }
                 return dedent("""
                         {
                         "product_name": "3-in-1 Pods",
@@ -97,7 +97,7 @@ class TestPipeline:
         test_promo = "test"
         calls = []
         def fake_llm(prompt):
-            if len(calls) < 3:
+            if len(calls) < 2:
                 calls.append(1)
                 #bas json - missing closing curly bracket }
                 return dedent("""
@@ -108,7 +108,19 @@ class TestPipeline:
                         "promotion_start_date": "2026-04-01",
                         "promotion_end_date": "2026-04-30",
                         "eligible_retailers": ["Tesco", "Asda"]
-                        """)                
+                        """)     
+            if len(calls) < 3:
+                calls.append(1)
+                #fail validation - wrong date format   
+                return dedent("""
+                        {
+                        "product_name": "3-in-1 Pods",
+                        "brand": "Ariel",
+                        "discount_percentage": 20,
+                        "promotion_start_date": "04/01/2026",
+                        "promotion_end_date": "2026-04-30",
+                        "eligible_retailers": ["Tesco", "Asda"]
+                        """)       
             return dedent("""
                     {
                     "product_name": "3-in-1 Pods",
