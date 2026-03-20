@@ -1,12 +1,9 @@
 def main(input_name: str):
     from dotenv import load_dotenv
     from google import genai
-    from prompts import create_initial_field_extract_prompt, create_retry_field_extract_prompt
-    from schema import ProductPromotion
     from io_utils import read_txt_input, write_json_output
     from llm import create_llm_wrapper
     from extractor import run_extraction
-    import json
 
     #loads gemini api key as environment variable
     load_dotenv() 
