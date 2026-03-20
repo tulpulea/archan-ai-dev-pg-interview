@@ -20,7 +20,7 @@ The repository is divided into the following folders:
 ### Pipeline Breakdown
 1. Read input file for promotional text
 2. Create LLM wrapper for convenience: prompt in, LLM text out
-3. Try to run exraction pipeline, with up to 3 re-attempts
+3. Try to run exraction pipeline with up to 3 re-attempts
 4. If extracted successfully, save output, else print error message
 
 ### Features
