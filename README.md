@@ -26,7 +26,7 @@ The repository is divided into the following folders:
 ### Features
 - Pydantic schema validation for LLM extracted data
 - Implementation with Gemini Free Tier
-- Pytest test cases
+- Pytest test cases suite
 
 ### Reproducability Steps
 1. Create virtual environment: `python3 -m venv pg-task`
