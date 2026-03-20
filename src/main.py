@@ -3,12 +3,12 @@ def main(input_name: str):
     from google import genai
     from prompts import create_initial_field_extract_prompt, create_retry_field_extract_prompt
     from schema import ProductPromotion
+    from io_utils import read_txt_input, write_json_output
     import json
 
     #loads gemini api key as environment variable
     load_dotenv() 
-    with open(f"inputs/{input_name}.txt", "r",encoding="utf-8") as f:
-        promotion_text = f.read()
+    promotion_text = read_txt_input(input_name)
 
     client = genai.Client()
     model = "gemini-3-flash-preview"
