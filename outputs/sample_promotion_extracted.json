@@ -1,0 +1,11 @@
+{
+  "product_name": "Ariel 3-in-1 Pods",
+  "brand": "Ariel",
+  "discount_percentage": 20,
+  "promotion_start_date": "2026-04-01",
+  "promotion_end_date": "2026-04-30",
+  "eligible_retailers": [
+    "Tesco",
+    "Asda"
+  ]
+}
