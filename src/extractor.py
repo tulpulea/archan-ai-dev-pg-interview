@@ -1,5 +1,4 @@
 import json
-import types
 from src.schema import ProductPromotion
 from src.prompts import create_initial_field_extract_prompt, create_retry_field_extract_prompt
 
