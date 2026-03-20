@@ -28,10 +28,15 @@ The repository is divided into the following folders:
 - Implementation with Gemini Free Tier
 - Pytest test cases suite
 
-### Reproducability Steps
+### Reproducability
+The following steps must be completed in order to reproduce the results of this project:
 1. Create virtual environment: `python3 -m venv pg-task`
 2. Activate virtual environment: `source pg-task/bin/activate`
-3. Create environment variable file: `touch .env`
-4. Add Gemini API Key to .env file: `GEMINI_API_KEY=<INSERT API KEY HERE>`
-5. Update PYTHONPATH for tests: `export PYTHONPATH="$PYTHONPATH:$PWD"`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Create environment variable file: `touch .env`
+5. Add Gemini API Key to .env file: `GEMINI_API_KEY=<INSERT API KEY HERE>`
+6. Update PYTHONPATH for tests: `export PYTHONPATH="$PYTHONPATH:$PWD"`
+7. Run test cases: `pytest`
+8. Run Demo: `python3 src/main.py`
+
 
