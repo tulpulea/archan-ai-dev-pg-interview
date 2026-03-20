@@ -3,6 +3,6 @@ def read_txt_input(input_name: str):
         promotion_text = f.read()
     return promotion_text
 
-def write_json_output(product_promotion, input_name: str):
+def write_json_output(extracted_data, input_name: str):
     with open(f"outputs/{input_name}_extracted.json","w") as f:
-            f.write(product_promotion.model_dump_json(indent=2))
+            f.write(extracted_data.model_dump_json(indent=2))
