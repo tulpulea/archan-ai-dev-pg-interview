@@ -1,8 +1,9 @@
 import json
-from schema import ProductPromotion
-from prompts import create_initial_field_extract_prompt, create_retry_field_extract_prompt
+import types
+from src.schema import ProductPromotion
+from src.prompts import create_initial_field_extract_prompt, create_retry_field_extract_prompt
 
-def run_extraction(promo_text: str, llm_extraction_func: function):
+def run_extraction(promo_text: str, llm_extraction_func):
     initial_prompt = create_initial_field_extract_prompt(promo_text)
     extracted_text = llm_extraction_func(initial_prompt)
     error_msg = None
