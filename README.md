@@ -22,6 +22,13 @@ The repository is divided into the following folders:
 - Assumed that year should be current year if missing in input
 - Assumed any field can be empty (null)
 
+### With more time
+- Test pipeline with messy input text and Real LLM tests (longer text, multiple products mentioned, etc)
+- Implementing caching, batching, asynchronous processing
+- Better error handling, rate limit handling, logging
+- Stricter schema validation, including input and output validation
+- Alternative solutions: using Regular Expressions and list of known products to manually extract from text using fuzzy string matching 
+
 ### Pipeline Breakdown
 1. Read input file for promotional text
 2. Create LLM wrapper for convenience: prompt in, LLM text out
