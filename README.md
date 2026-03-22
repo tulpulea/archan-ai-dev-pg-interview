@@ -17,6 +17,11 @@ The repository is divided into the following folders:
 3. Refactor main.py into additonal, modularized components: io_utils, llm, extractor
 4. Ensure demo working in main.py
 
+### Assumptions
+- Input would be in .txt format as a simple text paragraph
+- Assumed that year should be current year if missing in input
+- Assumed any field can be empty (null)
+
 ### Pipeline Breakdown
 1. Read input file for promotional text
 2. Create LLM wrapper for convenience: prompt in, LLM text out
